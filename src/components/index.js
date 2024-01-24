@@ -1,3 +1,4 @@
 import LineChart from "./LineChart";
+import ChartCard from "./ChartCard";
 
-export {LineChart}
+export { LineChart, ChartCard }
