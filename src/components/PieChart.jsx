@@ -39,4 +39,4 @@ const PieChart = () => {
   );
 };
 
-export default LineChart;
+export default PieChart;
