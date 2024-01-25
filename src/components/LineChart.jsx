@@ -1,6 +1,7 @@
 // LineChart.js
 import React, { useEffect, useContext } from "react";
 import { Line } from "react-chartjs-2";
+import toast from "react-hot-toast";
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import { GlobalContext } from "../context/GlobalContextProvider.jsx";
@@ -8,6 +9,8 @@ import { GlobalContext } from "../context/GlobalContextProvider.jsx";
 Chart.register(CategoryScale);
 
 const LineChart = () => {
+  
+  
   // import globalContext
   const { chartDataShowing, chartData } = useContext(GlobalContext);
 

@@ -5,6 +5,7 @@ import realData from "../utils";
 export const GlobalContext = createContext();
 
 const GlobalContextProvider = ({ children }) => {
+  const [load, setLoad] = useState(false);
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [],
@@ -42,6 +43,7 @@ const GlobalContextProvider = ({ children }) => {
         chartData,
         chartDataShowing,
         setChartData,
+        load, setLoad
       }}
     >
       {children}

@@ -27,6 +27,7 @@ const Home = () => {
             title="Line Chart"
             description="Visualize trends over time with a line chart."
             link="/linechart"
+           
           />
           <ChartCard
             title="Covid-19 Fetching Data Chart"

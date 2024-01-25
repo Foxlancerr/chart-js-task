@@ -1,14 +1,18 @@
 // In your CovidCharts.js file
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import { covidData } from "../utils";
+import { GlobalContext } from "../context/GlobalContextProvider";
 
 const CovidCharts = () => {
   const [chartData, setChartData] = useState(covidData);
+  const { setLoad, load } = useContext(GlobalContext);
 
   useEffect(() => {
+    
     const fetchData = async () => {
       try {
+        setLoad(true);
         const response = await fetch(
           "https://disease.sh/v3/covid-19/countries"
         );
@@ -36,6 +40,8 @@ const CovidCharts = () => {
     };
 
     fetchData();
+    console.log(load);
+    setLoad(false);
   }, []);
 
   // Define chart options (customize as needed)
@@ -47,7 +53,7 @@ const CovidCharts = () => {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center h-screen">
+    <div className="flex justify-center flex-col items-center h-screen z-0">
       <div className="w-[60%]">
         <h2 className="text-4xl mb-10 font-bold text-blue-600 text-center">
           COVID-19 Data
