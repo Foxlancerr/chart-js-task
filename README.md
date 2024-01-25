@@ -1,5 +1,13 @@
 # Implementation of Charts Using ChartJS Library
 
+## How to clone it from github.com and used it
+
+```md
+git clone https://github.com/Foxlancerr/chart-js-task.git
+npm install
+npm run dev
+```
+
 ## Routes
 
 1. http://localhost:5173
